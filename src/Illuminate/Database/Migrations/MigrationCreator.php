@@ -138,6 +138,7 @@ class MigrationCreator
                 $pivot['prefixes'] ? ',' : '_',
                 $pivot['prefixes'] ?: $table
             );
+
             $stub = str_replace(
                 ['firstPivotId', 'secondPivotId', 'firstPivotTable', 'secondPivotTable'],
                 [$first.'_id', $second.'_id', Str::plural($first), Str::plural($second)],
